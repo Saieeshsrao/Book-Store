@@ -9,6 +9,8 @@ const EditBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
+  const[genre,setgenre]=useState('');
+  const [imageurl, setimageurl] = useState(''); 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const {id} = useParams();
@@ -34,6 +36,8 @@ const EditBook = () => {
       title,
       author,
       publishYear,
+      genre,
+      imageurl,
     };
     setLoading(true);
     axios
@@ -81,6 +85,24 @@ const EditBook = () => {
             type='number'
             value={publishYear}
             onChange={(e) => setPublishYear(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>Genre</label>
+          <input
+            type='string'
+            value={genre}
+            onChange={(e) => setgenre(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>Image url</label>
+          <input
+            type='string'
+            value={imageurl}
+            onChange={(e) => setimageurl(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>

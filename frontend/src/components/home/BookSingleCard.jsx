@@ -28,7 +28,15 @@ const BookSingleCard = ({ book }) => {
         <BiShow
           className='text-3xl text-blue-800 hover:text-black cursor-pointer'
           onClick={() => setShowModal(true)}
+          
         />
+         <img
+          src={book.imageurl}
+          alt={book.title} // Add a suitable alt text for accessibility
+          className='max-h-40 max-w-40 object-cover rounded-md' // Adjust the height and width as needed
+        />
+       
+        
         <Link to={`/books/details/${book._id}`}>
           <BsInfoCircle className='text-2xl text-green-800 hover:text-black' />
         </Link>

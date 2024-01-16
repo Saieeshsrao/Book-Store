@@ -9,6 +9,8 @@ const CreateBooks = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
+  const[genre,setgenre]=useState('');
+  const [imageurl, setimageurl] = useState(''); 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
@@ -18,6 +20,8 @@ const CreateBooks = () => {
       title,
       author,
       publishYear,
+      genre,
+      imageurl
     };
     setLoading(true);
     axios
@@ -67,6 +71,26 @@ const CreateBooks = () => {
             onChange={(e) => setPublishYear(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>genre</label>
+          <input
+            type='string'
+            value={genre}
+            onChange={(e) => setgenre(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+          
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>imageurl</label>
+          <input
+            type='string'
+            value={imageurl}
+            onChange={(e) => setimageurl(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+          
         </div>
         <button className='p-2 bg-sky-300 m-8' onClick={handleSaveBook}>
           Save
