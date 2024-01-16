@@ -1,7 +1,8 @@
 import express from 'express';
 import { Book } from '../models/bookModel.js';
-
+import { login } from '../models/login.js';
 const router = express.Router();
+
 
 // Route for Save a new Book
 router.post('/', async (request, response) => {
@@ -90,6 +91,62 @@ router.put('/:id', async (request, response) => {
     response.status(500).send({ message: error.message });
   }
 });
+
+router.post('/login', async (request, response) => {
+  try {
+    const { email, password } = request.body;
+
+    // Check if the user exists
+    const user = await login.findOne({ email });
+
+    if (!user) {
+      return response.status(401).json({ message: 'Invalid email or password' });
+    }
+
+    // Compare the provided password with the stored password
+    if (password !== user.password) {
+      return response.status(401).json({ message: 'Invalid email or password' });
+    }
+
+    // If the password is valid, you can proceed with your authentication logic
+
+    response.status(200).json({ message: 'Login successful' });
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+router.post('/signup',async(request, response) =>{
+  try{
+    const {name,email,password}=request.body;
+    const existingUser = await login.findOne({ email });
+    if (existingUser) {
+      return response.status(400).json({ message: 'Email is already registered' });
+    }
+
+    // Hash the password
+    const hashedPassword = password;
+
+    // Create a new user
+    const newUser = new login({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    // Save the user to the database
+    await newUser.save();
+
+    response.status(201).json({ message: 'User registered successfully' });
+
+
+  }
+  catch(error){
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+  
+})
 
 // Route for Delete a book
 router.delete('/:id', async (request, response) => {
