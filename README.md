@@ -3,38 +3,37 @@
 [Link to Demo Video](https://drive.google.com/file/d/1M0GHv8hMqDuVf0lSwCgG9RKEvTNt15jX/view?usp=sharing)
 ## IMAGES
 
-![image](https://github.com/Saieeshsrao/Allo-Heath-food-ordering-app/blob/a8342afdccc228bbd4fbadde4f349191b9116290/images/applying%20filter%20img.png)
-![image](https://github.com/Saieeshsrao/Allo-Heath-food-ordering-app/blob/a8342afdccc228bbd4fbadde4f349191b9116290/images/homepage.png)
-![image](https://github.com/Saieeshsrao/Allo-Heath-food-ordering-app/blob/a8342afdccc228bbd4fbadde4f349191b9116290/images/login.png)
-![image](https://github.com/Saieeshsrao/Allo-Heath-food-ordering-app/blob/a8342afdccc228bbd4fbadde4f349191b9116290/images/multple%20filters.png)
-
-[Link to Demo Video](https://drive.google.com/file/d/1M0GHv8hMqDuVf0lSwCgG9RKEvTNt15jX/view?usp=sharing)
-
-
+### Card View
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/cardview.png)
+### List View
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/listview.png)
+### Login and signup
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/login.png)
+### Add book 
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/addbook.png)
+### Edit book
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/editbook.png)
+### Show Book
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/showbook.png)
+### Delete Book
+![image](https://github.com/Saieeshsrao/Book-Store/blob/c64a9df1cd2e36cce628ea51fc1271c296a8f5ca/images/deletebook.png)
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/Saieeshsrao/Allo-Heath-food-ordering-app.git
-```
-
-start your MongoDB compass
-edit the .env file according to the Db url
+  git clone https://github.com/Saieeshsrao/Book-Store.git
 
 Go to the backend
 ```bash 
 cd backend
 ```
-
 ```bash
   npm i
   npm run dev
 ```
-
 Go to the frontend
-
 ```bash
   cd frontend
 ```
@@ -42,13 +41,5 @@ Go to the frontend
 npm i
 ```
 ```bash
-npm start 
+npm run dev
 ```
-
-there are multiple login credentials here
-
-for faster access use 
-
-Seatnumber-A123
-PRN-ABC123
-
