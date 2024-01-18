@@ -1,6 +1,6 @@
-## DEMO VIDEO LINK 
+## Demo 
 
-[Link to Demo Video](https://drive.google.com/file/d/1M0GHv8hMqDuVf0lSwCgG9RKEvTNt15jX/view?usp=sharing)
+
 ## IMAGES
 
 ### Card View
