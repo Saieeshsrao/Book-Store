@@ -23,31 +23,56 @@ const Login = () => {
 
       // If the login is successful, navigate to /home
       console.log('Login successful:', response.data);
+      alert('login successfull')
       window.location.href = '/home';
     } catch (error) {
       // Handle login failure (display error messages, etc.)
       console.error('Login failed:', error.message);
+      alert("login failed")
     }
   };
 
+  // const handleSignupSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     // Make a request to your signup endpoint
+  //     const response = await axios.post('http://localhost:5555/books/signup', {
+  //       name: signupName,
+  //       email: signupEmail,
+  //       password: signupPassword,
+  //     });
+
+  //     // If the signup is successful, you can handle the response (redirect, show a success message, etc.)
+  //     console.log('Signup successful:', response.data);
+  //   } catch (error) {
+  //     // Handle signup failure (display error messages, etc.)
+  //     console.error('Signup failed:', error.message);
+  //   }
+  // };
   const handleSignupSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      // Make a request to your signup endpoint
+      // Make a request to check if the user already exists
+     
+      // If the user doesn't exist, proceed with the signup
       const response = await axios.post('http://localhost:5555/books/signup', {
         name: signupName,
         email: signupEmail,
         password: signupPassword,
       });
-
+  
       // If the signup is successful, you can handle the response (redirect, show a success message, etc.)
       console.log('Signup successful:', response.data);
+      alert('Signup successful');
     } catch (error) {
       // Handle signup failure (display error messages, etc.)
       console.error('Signup failed:', error.message);
+      alert('Signup failed');
     }
   };
+  
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
