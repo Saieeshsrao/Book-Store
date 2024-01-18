@@ -1,6 +1,33 @@
 ## Demo 
 https://github.com/Saieeshsrao/Book-Store/assets/89183081/098ce133-2e6e-4167-89b5-b0def81af5b4
 
+## Tech Stack
+
+**Client:** React+Vite, TailwindCSS, javaScript
+
+**Server:** Node, Express, mongoDB
+
+## Features Implemented
+
+- [x]  Login, Signup and logout
+- [x]  Card View and list View
+- [x]  Edit Books
+- [x]  Add New Books
+- [x]  Delete Book
+- [x]  View book
+
+## Design Decisions
+- Frontend using react and tailwind since i needed to have same components and react helps in that and tailwind has very good documentation.
+
+- backend node.js and express.js framework.
+
+- database - used online cloud nosql database mongodb for scalabilty and ease of storing and querying.
+
+## Challenges Faced
+
+- Using async requests using axios .
+- cross domain request policy for the different domains to send request to server.
+- tailwind css for the card view.
 
 ## IMAGES
 
