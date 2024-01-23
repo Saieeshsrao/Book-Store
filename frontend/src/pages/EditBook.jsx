@@ -23,6 +23,8 @@ const EditBook = () => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
         setTitle(response.data.title)
+        setgenre(response.data.genre)
+        setimageurl(response.data.imageurl)
         setLoading(false);
       }).catch((error) => {
         setLoading(false);
